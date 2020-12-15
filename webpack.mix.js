@@ -13,9 +13,8 @@ mix.pug = require('laravel-mix-pug');
  */
 // Change setPublicPath to set where the .cshtml get the public access
 // Change setResourceRoot to set the URL for assets
-
+let fs = require('fs');
 function mix_multiple(folder,method,srcExt,outputExt) {
-    let fs = require('fs');
     const paths = fs.readdirSync(folder);
     for (let i = 0; i < paths.length; i++) {
         if (paths[i].indexOf('.'+ srcExt) > 0 && paths[i].charAt(0) !== '_') {
