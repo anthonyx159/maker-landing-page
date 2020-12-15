@@ -1,0 +1,7 @@
+package-lock.json
+mix-manifest.json
+node_modules
+dist
+build
+.idea
+.vscode
