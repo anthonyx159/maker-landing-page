@@ -12,7 +12,9 @@ Lee la documentación aqui: https://laravel-mix.com/docs/5.0
     
         - Para compilar una vez, correr en consola: `npm run dev`
         
-        - Para escuchar los cambios y compilar, correr en consola: `npm run watch` 
+        - Para escuchar los cambios y compilar, correr en consola: `npm run watch`
+        
+        - Para crear un servidor local, escuchar los cambios y compilar, correr en consola: `npm run hot`  
     
     - Si deseas compilar para produccion, correr en consola: `npm run prod`
     
