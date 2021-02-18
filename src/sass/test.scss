@@ -1,5 +1,8 @@
 /**
 TEST SCSS
  */
+@import "./utils/variables";
+@import "./utils/mixins";
+
 @import "./modules/common";
 @import "./modules/typography";

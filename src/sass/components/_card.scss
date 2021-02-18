@@ -1,0 +1,108 @@
+.part {
+    &-three {
+         margin-bottom: 202px;
+
+         @include from (md) {
+            margin-bottom: 144px;
+        }
+    }
+}
+
+.benefit {
+
+    &__card-content {
+        display: flex;
+        justify-content: center;
+
+        @include from (md) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__card {
+        max-width: 255px;
+
+        @include from (md) {
+            display: flex;
+            max-width: 520px;
+        }
+
+        @include from (sm) {
+            flex-direction: column;
+            text-align: center;
+            margin-left: 0;
+            margin-bottom: 32px;
+        }
+
+        &:not(:nth-child(4)) {
+            margin-right: 30px;
+
+            @include from (md) {
+                margin-right: 0px;
+            }
+
+            @include from (sm) {
+                //todos tienen margin bottom menos el cuarto hijo
+                margin-bottom: 32px;
+            }
+        }
+
+        &:nth-child(2n) {
+            margin-top: 48px;
+
+            @include from (md) {
+                margin-top: 0;
+            }
+        }
+
+        &:nth-child(2n -1) {
+
+            @include from (md) {
+                margin-left: 55px;
+            }
+
+            @include from (sm) {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__image {
+        margin-bottom: 48px;
+
+        @include from (md) {
+            margin-right: 55px;
+        }
+
+        @include from (sm) {
+            margin-right: 0;
+            margin-bottom: 32px;
+        }
+    }
+
+    &__body {
+        h3 {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 23px;
+
+            @include from (sm) {
+                margin-bottom: 11px;
+            }   
+        }
+
+        p{
+            color: #777F98;
+            line-height: 25px;
+            font-size: 15px;
+            font-weight: 500;
+
+            @include from (sm) {
+                margin-right: 0;
+                line-height: 25px;
+                max-width: 330px;
+            }            
+        }
+    }
+}

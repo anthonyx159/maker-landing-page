@@ -1,0 +1,26 @@
+//Layout
+$max-width-desktop: 80%;
+$max-width-tablet: 94%;
+
+//font
+
+
+//color
+
+
+//z-index
+$z-back: -10;
+$z-normal: 1;
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-fixed-aumented: 110;
+$z-modal: 100;
+
+//Breakpoint
+$breakpoints : (
+        xs: 311px,
+        sm: 576px,
+        md: 768px,
+        l: 992px,
+        xl: 1200px 
+);

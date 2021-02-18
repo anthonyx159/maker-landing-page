@@ -4,7 +4,19 @@ MEDIA SCSS - Importa todos los componentes necesarios definidos en package.json
 @import "~sweetalert2/src/sweetalert2";
 
 body {
-  color: #fff;
-  background: #000 url("../../../src/images/movistar.png") center center no-repeat;
-  text-align: center;
+  font-family: "Manrope";
+  font-style: normal;
+  background: #080C20;
+  color: #FFFFFF;
+  // text-align: center;
+}
+
+.container {
+  max-width: $max-width-desktop;
+  margin-left: auto;
+  margin-right: auto;
+  
+  @include from(md) {
+    max-width: $max-width-tablet;
+  }
 }

@@ -1,0 +1,85 @@
+.part {
+
+    &-five {
+        margin-bottom: 120px;
+        padding-top: 60px;
+        
+        @include from(md) {
+            padding-top: 0;
+        }
+    }
+}
+
+.message {
+    margin: 0 auto;
+    max-width: 476px;
+    text-align: center;
+
+    h3 {
+        font-size: 32px;
+        font-weight: 800;
+        line-height: 44px;
+        margin-bottom: 42px;
+
+        @include from(md) {
+            font-size: 24px;
+            line-height: 32px;
+            max-width: 220px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &__email {
+        background: #093F68;
+        border: none;
+        border-radius: 24px;
+        color: #FFFFFF;
+        margin-right: 16px;
+        width: 320px;
+        height: 48px;
+        padding-left: 18px;
+        margin-bottom: 24px;
+
+        @include from(sm) {
+            margin-right: 0;
+        }
+
+        //Cambiar el color de texto del placeholder
+        &::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+            color: #6B8CA4;
+        }
+        &:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+           color: #6B8CA4;
+           opacity: 1 /* esto es porque Firefox le reduce la opacidad por defecto */;
+        }
+        &::-moz-placeholder { /* Mozilla Firefox 19+ */
+           color: #6B8CA4;
+           opacity:  1;
+        }
+        &:-ms-input-placeholder { /* Internet Explorer 10-11 */
+           color: #6B8CA4;
+        }
+    }
+
+    &__button {
+        color: #093F68;
+        background: #3EE9E5;
+        font-size: 15px;
+        font-weight: 800;
+        width: 140px;
+        height: 48px;
+        border: none;
+        border-radius: 24px;
+
+        @include from(sm) {
+            width: 320px;
+        }
+
+        &:hover {
+            color: #FFFFFF;
+            background: none;
+            border: 2px solid #3EE9E5;
+        }
+    }
+}

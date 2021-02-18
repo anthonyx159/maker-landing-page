@@ -2,8 +2,102 @@ head
     title="Index"
     meta(name='description', content='Index description')
     meta(name='og:title', content="Index")
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap" rel="stylesheet">
     link(rel='shortcut icon', href='/images/static/favicon.ico', type='image/x-icon')
     link(rel='stylesheet', href='/css/index.css')
 body
-    h1#main Hola Mundo!
+    header
+        .part-one
+            a(href="#")
+                img(src="../images/static/logo.svg", alt="Maker")
+
+    section
+        .container.part-two
+            .banner
+                .banner__img
+                    //- picture
+                    //-     source(srcset="../images/static/banner-mobile.png" media="(max-width: 768px)")
+                    //-     source(srcset="../images/static/banner-desktop.png" media="(min-width: 769px)")
+                    //-     img(src="../images/static/banner-desktop.png", alt="Banner about children studying")
+                .banner__content
+                    h1 Get paid for the work you <span>love</span> to do.
+                    p The 9-5 grind is so last century. We believe in living life on your own terms. Whether you’re looking to escape the rat race or set up a side hustle, we’ve got you covered.
+                .banner__decoration
+                        image(src="../images/static/decoration-mobile.png", alt="Decoration")    
+
+    section
+        .container.part-three
+            .benefit__card-content
+                .benefit__card
+                    .benefit__image
+                        picture
+                            source(srcset="../images/static/egg-mobile.png" media="(max-width: 768px)")
+                            source(srcset="../images/static/egg-desktop.png" media="(min-width: 769px)")
+                            img(src="../images/static/egg-desktop.png", alt="Egg painted")
+                    .benefit__body
+                        h3 Indulge your passions
+                        p Your passions shouldn't be just for the weekend. Earn a living doing what you love.
+                .benefit__card
+                    .benefit__image
+                        picture
+                            source(srcset="../images/static/money-mobile.png" media="(max-width: 768px)")
+                            source(srcset="../images/static/money-desktop.png" media="(min-width: 769px)")
+                            img(src="../images/static/money-desktop.png", alt="Money inside a container")
+                    .benefit__body
+                        h3 Gain financial freedom
+                        p Start making money work for you. There’s nothing quite like earning while you sleep. 
+                .benefit__card
+                    .benefit__image
+                        picture
+                            source(srcset="../images/static/cup-mobile.png" media="(max-width: 768px)")
+                            source(srcset="../images/static/cup-desktop.png" media="(min-width: 769px)")
+                            img(src="../images/static/cup-desktop.png", alt="Cup of wine")
+                    .benefit__body
+                        h3 Choose your lifestyle
+                        p Own your daily schedule. Fancy a lie-in? Go for it! Take charge of your week.
+                .benefit__card
+                    .benefit__image
+                        picture
+                            source(srcset="../images/static/car-mobile.png" media="(max-width: 768px)")
+                            source(srcset="../images/static/car-desktop.png" media="(min-width: 769px)")
+                            img(src="../images/static/car-desktop.png", alt="Car bringing a package")
+                    .benefit__body
+                        h3 Work from anywhere
+                        p Selling online means not being pinned down. Want to work AND travel? Go for it!
+    
+    section
+        .container.part-four
+            .plans
+                .plans__content
+                    h3 Our pricing plans
+                    p We only make money when our creators make money. Our plans are always affordable, and it’s completely free to get started.
+                .plans__card-content
+                    .plans__card
+                        p.plans__card-top Dip your toe
+                        p.plans__card-paragraph Just getting started? No problem at all! Our free plan will take you a long way.
+                        h3.plans__card-price Free
+                        ul.plans__card-list
+                            li.plans__card-item Unlimited products
+                            li.plans__card-item Basic analytics
+                            li.plans__card-item Limited marketplace exposure
+                            li.plans__card-item 10% fee per transaction
+                    .plans__card.plans__card-modified
+                        p.plans__card-top Dive right in
+                        p.plans__card-paragraph Ready for the big time? Our paid plan will help you take your business to the next level.
+                        h3.plans__card-price $25.00 <span>/ month</span>
+                        ul.plans__card-list
+                            li.plans__card-item Custom domain
+                            li.plans__card-item Advanced analytics and reports
+                            li.plans__card-item High marketplace visibility
+                            li.plans__card-item 5% fee per transaction
+
+    section
+        .container.part-five
+            form(action="post").message
+                h3 Get notified when we launch
+                input(type="email" placeholder="Email address").message__email
+                input(type="submit" value="Get notified").message__button     
+                            
     script(src="/js/index.js")

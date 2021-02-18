@@ -1,5 +1,15 @@
 /**
 MAIN SCSS
  */
+@import "./utils/variables";
+@import "./utils/mixins";
+
 @import "./modules/common";
 @import "./modules/typography";
+@import "./modules/reset";
+
+@import "./components/header";
+@import "./components/banner";
+@import "./components/card";
+@import "./components/plans";
+@import "./components/message";

@@ -1,0 +1,104 @@
+.container.part-two {
+    //Para alinear el banner 
+    max-width: 100%;
+}
+
+.part {
+
+    &-two {
+        // El realiza los breakpoints
+        margin-top: 140px; 
+        margin-bottom: 200px;
+
+        @include from(md) {
+            margin-bottom: 100px;
+        }
+
+        @include from(sm) {
+            margin-top: 67px; 
+            margin-bottom: 144px;
+        }
+
+        .banner {
+            padding-top: 73px;
+            padding-bottom: 50px;
+            position: relative;
+
+            @include from(sm) {
+                padding-top: 0;
+                padding-bottom: 0;
+            }            
+
+            &__img {
+                background-image: url(../../images/static/banner-desktop.png);
+                background-size: contain;
+                background-repeat: no-repeat;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: $z-back;
+
+                @include from(sm) {
+                    background-image: url(../../images/static/banner-mobile.png);
+                    background-repeat: repeat;
+                    position: static;
+                    z-index: 0;
+                    height: 231px;
+                    margin-bottom: 48px;
+                }
+            }
+            
+            &__content {
+                max-width: 560px;
+                // height: 460px;
+                text-align: center;
+                margin: 0 auto 64px;
+            
+                h1 {
+                    font-size: 48px;
+                    font-weight: 800;
+                    margin-bottom: 24px;
+
+                    @include from(md) {
+                        max-width: 340px;
+                        font-size: 32px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+                }
+
+                span {
+                    color: #3EE9E5;
+                }
+
+                p{
+                    color: #777F98;
+                    font-size: 15px;
+                    font-weight: 500;
+                    line-height: 25px;
+
+                    @include from(md) {
+                        max-width: 450px;
+                        margin: 0 auto;
+                    }
+
+                    @include from(sm) {
+                        margin-bottom: 32px;
+                    }
+                }
+            }
+
+            &__decoration {
+                    display: block; 
+                    text-align: center;
+            }
+
+            // &::after {
+            //     content: url(../../images/static/decoration-mobile.png);
+            //     position: relative;
+            // }
+        }
+    }
+}

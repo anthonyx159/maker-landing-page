@@ -1,0 +1,148 @@
+.part {
+
+    &-four {
+        margin-bottom: 151px;
+
+        @include from(sm) {
+            margin-bottom: 145px;
+        }
+    }
+}
+
+.plans {
+
+    &__content {
+        max-width: 540px;
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 72px;
+
+        h3 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-bottom: 24px;
+
+            @include from(md) {
+                font-size: 24px;
+            }
+        }
+
+        p{
+            color: #777F98;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 25px;
+        }
+    }
+
+    &__card-content {
+        display: flex;
+        justify-content: center;
+
+        @include from(md) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__card {
+        background: #093F68;
+        border-radius: 8px;
+        max-width: 445px;
+        padding: 49px 38px;
+        height: 425px;
+        
+        @include from(md) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &:nth-child(1) {
+            margin-right: 30px;
+            position: relative;
+
+            &::before {
+                content: url(../../images/static/icon-free.svg);
+                position: absolute;
+                top: -23px;
+                left: 35px;
+            }
+
+            @include from(md) {
+                margin-right: 0;
+                margin-bottom: 65px;
+            }
+        }
+        
+        &:nth-child(2) {
+            position: relative;
+
+            &::before {
+                content: url(../../images/static/icon-paid.svg);
+                position: absolute;
+                top: -33px;
+                left: 35px;
+            }
+        }
+
+        &-top {
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 19px;
+        }
+
+        &-paragraph {
+            color: #9CB2C2;
+            font-size: 15px;
+            font-weight: 500;
+            margin-bottom: 24px;
+            line-height: 25px;
+        }
+
+        &-price {
+            font-size: 40px;
+            font-weight: 800;
+            margin-bottom: 19px;
+        }
+
+        &-item {
+            font-size: 15px;
+            font-weight: 500;
+
+            &:not(:nth-child(4)) {
+                margin-bottom: 24px;
+            }
+
+            &::before {
+                content: url(../../images/static/icon-check-free.svg);
+                margin-right: 13px;
+            }
+        }
+    }
+
+    &__card.plans__card-modified {
+        background: #3EE9E5;
+        color: #080C20;
+        // Para resaltar el de mayor precio
+        height: 449px;
+        margin-top: -12px;
+
+        //Cambiar el color del texto
+        .plans__card-paragraph {
+            color: #080C20;
+        }
+
+        .plans__card-price {
+            span {
+                font-size: 15px;
+                font-weight: 500;
+            }
+        }
+
+        .plans__card-item {
+            &::before {
+                content: url(../../images/static/icon-check-paid.svg);
+            }
+        }
+    }
+}

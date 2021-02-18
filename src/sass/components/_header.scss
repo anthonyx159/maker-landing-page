@@ -1,0 +1,20 @@
+header {
+    // background: gray;
+}
+
+.part {
+    &-one {
+        max-width: $max-width-desktop;
+        margin: 0 auto;
+        padding-top: 81px;
+
+        @include from(md) {
+            max-width: $max-width-tablet;
+            padding-top: 48px;
+        }
+
+        @include from(sm) {
+                text-align: center;
+        }
+    }
+}
