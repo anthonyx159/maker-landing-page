@@ -1,5 +1,6 @@
-# Skeleton Mix
+# link del projecto
 
+[https://anthonyx159.github.io/maker-landing-page/]
 ## Proyecto con Mix (webpack wrapper)
 
 Lee la documentación aqui: https://laravel-mix.com/docs/5.0
